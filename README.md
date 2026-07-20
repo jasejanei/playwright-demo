@@ -6,8 +6,13 @@
 # Install dependencies
 npm install
 
+# Install dotenv 
+npm install --save-dev dotenv cross-env
+
 # Install browsers
 npx playwright install
+
+## How to run tests in MacOS
 
 # Run API tests
 NODE_ENV=testing npx playwright test --project=api
@@ -15,7 +20,22 @@ NODE_ENV=testing npx playwright test --project=api
 # Run UI tests
 NODE_ENV=testing npx playwright test --project=ui
 
+## How to run tests in Windows
+
+# Run API Tests - Windows(CMD)
+set "NODE_ENV=testing" && npx playwright test --project=api
+
+# Run UI Tests - Windows(CMD)
+set "NODE_ENV=testing" && npx playwright test --project=ui
+
+# Run API Tests - Windows(PowerShell)
+$env:NODE_ENV="testing"; npx playwright test --project=api
+
+# Run UI Tests - Windows(PowerShell)
+$env:NODE_ENV="testing"; npx playwright test --project=ui
+
 ```
+
 For full framework details, see [Detailed README](backupReadme/README.md)
 
 ## Which tools you chose and why, given the kind of system described below.
