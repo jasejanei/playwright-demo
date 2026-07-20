@@ -8,7 +8,7 @@ node_modules/
 /playwright/.auth/
 
 # 
-.env.testing
+
 .DS_Store
 
 example.spec.ts
