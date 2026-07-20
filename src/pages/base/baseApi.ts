@@ -1,6 +1,6 @@
 // BaseApi provides reusable API validation helpers for extending classes.
 import { APIRequestContext, APIResponse, expect, request } from "@playwright/test";
-import { getValidAuthToken } from "../../../../../../utils/auth";
+import { getValidAuthToken } from "../../../utils/auth";
 
 export abstract class BaseApi {
 

@@ -1,4 +1,4 @@
-import { test, expect } from "../fixtures/fixtures";
+import { test, expect } from "../../fixtures/fixtures";
 import * as fs from 'fs';
 
 let testData: Record<string, any> = {};

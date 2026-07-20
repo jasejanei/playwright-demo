@@ -47,19 +47,27 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'ui',
+      testDir: './src/tests/UI',
+      testMatch: ['**/*.test.ts'],
+      use: {
+        baseURL: process.env.url,
+        headless: true,
+      },
+    },
+    {
+      name: 'api',
+      testDir: './src/tests/API',
+      testMatch: ['**/*.test.ts'],
+      use: {
+        baseURL: process.env.url,
+      },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
